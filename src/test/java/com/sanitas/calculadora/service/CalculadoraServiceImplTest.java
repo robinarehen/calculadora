@@ -24,4 +24,17 @@ public class CalculadoraServiceImplTest {
 
 		assertThat(expected).isEqualTo(resultado);
 	}
+	
+	@Test
+	public void restar() {
+		
+		int numero1 = 3;
+		int numero2 = 2;
+
+		int resultado = this.calculadoraService.restar(numero1, numero2);
+
+		int expected = numero1 + numero2;
+
+		assertThat(expected).isEqualTo(resultado);
+	}
 }

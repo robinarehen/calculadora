@@ -1,8 +1,7 @@
 package com.sanitas.calculadora.service;
 
+@FunctionalInterface
 public interface CalculadoraService {
-
-	int sumar(int numero1, int numero2);
 	
-	int restar(int numero1, int numero2);
+	Integer operacion(Integer numero1, Integer numero2);
 }

@@ -50,4 +50,24 @@ public class CalculadoraApiControllerTest {
 
 		assertThat(resultActual).isEqualTo(resultExpected.toString());
 	}
+	
+	@Test
+	public void resta() throws Exception {
+		String url = "/calculadora/restar/{numero1}/{numero2}";
+		
+		this.mvcResult = this.mockMvc.perform(
+					get(url, this.numero1, this.numero2)
+					.contentType(MediaType.APPLICATION_JSON)
+				).andReturn();
+		
+		Integer statusExpected = 200;
+		Integer statusActual = this.mvcResult.getResponse().getStatus();
+		
+		assertThat(statusActual).isEqualTo(statusExpected);
+		
+		Integer resultExpected = this.numero1 - this.numero2;
+		String resultActual = this.mvcResult.getResponse().getContentAsString();
+
+		assertThat(resultActual).isEqualTo(resultExpected.toString());
+	}
 }

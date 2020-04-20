@@ -38,3 +38,7 @@ El símbolo `~` se debe reemplazar por la ruta en donde se haya descargado el pr
 		"num2": 2
 	}
 	```
+	
+3. Se implementa la documentación mediante **Swagger 2** y se puede visualizar en la ruta anexa.
+
+	[Swagger] http://localhost:8080/swagger-ui.html

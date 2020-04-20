@@ -20,6 +20,21 @@ El símbolo `~` se debe reemplazar por la ruta en donde se haya descargado el pr
 
 2. Al finalizar el punto 1, ejecutar el comando `mvn spring-boot:run` el cual inicializa el proyecto al cual se puede acceder mediante los siguientes links
 
-    [Sumar](http://localhost:8080/calculadora/sumar?numero1=2&numero2=3)
+    [Sumar - **GET**] http://localhost:8080/calculadora/sumar?numero1=2&numero2=3
 
-    [Restar](http://localhost:8080/calculadora/restar?numero1=3&numero2=2)
+    [Restar- **GET**]  http://localhost:8080/calculadora/restar/3/2
+    
+	[Operacion - **POST**] http://localhost:8080/calculadora/operacion
+	```JSON
+	{
+		"operador":"suma",
+		"num1": 2,
+		"num2": 3
+	}
+	
+	{
+		"operador":"resta",
+		"num1": 3,
+		"num2": 2
+	}
+	```
